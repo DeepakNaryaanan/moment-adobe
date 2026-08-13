@@ -10,6 +10,7 @@ helix-importer-ui
 .secret
 .env
 .env.*
+requirement/
 
 # Ensure these files are tracked
 !CLAUDE.md
