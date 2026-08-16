@@ -11,6 +11,10 @@ helix-importer-ui
 .env
 .env.*
 requirement/
+requirement/adobe_practice_experience_hub_prototype.html
+requirement/adobe_practice_experience_hub_prototype/
+drafts/tmp/
+drafts/tmp/adobe-practice-experience-hub-prototype.html
 
 # Ensure these files are tracked
 !CLAUDE.md

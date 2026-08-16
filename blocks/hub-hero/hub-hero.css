@@ -1,0 +1,115 @@
+main .hub-hero-wrapper {
+  max-width: 1536px;
+  padding: 0;
+}
+
+main .hub-hero {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+  padding: 62px 18px 46px;
+  color: #fff;
+  border-top: 1px solid rgb(135 170 255 / 14%);
+  background:
+    radial-gradient(circle at 78% 62%, rgb(61 95 255 / 45%), transparent 26%),
+    radial-gradient(circle at 92% 18%, rgb(53 69 186 / 45%), transparent 21%),
+    linear-gradient(180deg, rgb(6 15 48 / 30%), rgb(3 8 27 / 25%));
+}
+
+main .hub-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(42px, 5vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 580px;
+}
+
+main .hub-hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, #fff, #6da6ff 55%, #00d5c7);
+  background-clip: text;
+  color: transparent;
+}
+
+main .hub-hero .hub-hero-content > p:first-child {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #5bd8ff;
+}
+
+main .hub-hero .hub-hero-content > p:not(.button-wrapper) {
+  margin: 0;
+  color: #d5dcf4;
+  max-width: 640px;
+  font-size: 17px;
+}
+
+main .hub-hero .button-wrapper {
+  display: inline-flex;
+  margin: 28px 14px 0 0;
+}
+
+main .hub-hero a.button {
+  border-radius: 12px;
+  padding: 12px 26px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  background: rgb(255 255 255 / 4%);
+  color: #fff;
+  font-weight: 500;
+}
+
+main .hub-hero a.button.primary {
+  border: 0;
+  background: linear-gradient(90deg, #0b57ff, #2f78c4);
+}
+
+main .hub-hero .hub-hero-visual {
+  position: relative;
+  min-height: 340px;
+  border: 1px solid rgb(135 170 255 / 12%);
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 70% 38%, rgb(250 15 0 / 36%), transparent 16%),
+    radial-gradient(circle at 64% 53%, rgb(0 181 173 / 16%), transparent 25%),
+    radial-gradient(circle at 84% 26%, rgb(132 157 255 / 34%), transparent 20%),
+    linear-gradient(145deg, rgb(20 46 116 / 26%), rgb(255 255 255 / 0%));
+  overflow: hidden;
+}
+
+main .hub-hero .hub-hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 10% -15% -18% -5%;
+  background:
+    repeating-linear-gradient(
+      106deg,
+      rgb(125 155 255 / 0%) 0 36px,
+      rgb(125 155 255 / 55%) 37px 38px
+    );
+  opacity: 0.22;
+}
+
+main .hub-hero .hub-hero-mark {
+  position: absolute;
+  top: -4%;
+  right: 6%;
+  font-size: clamp(230px, 22vw, 340px);
+  font-weight: 900;
+  line-height: 1;
+  color: rgb(255 255 255 / 10%);
+}
+
+@media (width >= 900px) {
+  main .hub-hero {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 32px;
+    padding: 68px 28px 48px;
+  }
+
+  main .hub-hero .hub-hero-visual {
+    min-height: 378px;
+  }
+}

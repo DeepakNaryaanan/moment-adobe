@@ -1,0 +1,49 @@
+main .hub-steps-wrapper {
+  max-width: 1536px;
+  padding: 0 18px;
+}
+
+main .hub-steps > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+main .hub-steps > ul > li {
+  border: 1px solid rgb(135 170 255 / 22%);
+  border-radius: 16px;
+  padding: 16px 10px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(145deg, rgb(47 120 196 / 18%), rgb(0 0 72 / 50%));
+}
+
+main .hub-steps b {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+
+main .hub-steps small {
+  color: #aebada;
+  font-size: 12px;
+}
+
+@media (width >= 600px) {
+  main .hub-steps > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  main .hub-steps-wrapper {
+    padding: 0 28px;
+  }
+
+  main .hub-steps > ul {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

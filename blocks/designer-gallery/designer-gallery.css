@@ -1,0 +1,28 @@
+.designer-gallery-container .designer-gallery-wrapper {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main .designer-gallery {
+  line-height: 0;
+}
+
+main .designer-gallery > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .designer-gallery > ul > li {
+  margin: 0;
+}
+
+main .designer-gallery img,
+main .designer-gallery picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}

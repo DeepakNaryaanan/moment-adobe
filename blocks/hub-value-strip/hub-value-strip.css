@@ -1,0 +1,38 @@
+main .hub-value-strip-wrapper {
+  max-width: 1536px;
+  padding: 0;
+}
+
+main .hub-value-strip {
+  border-top: 1px solid rgb(135 170 255 / 22%);
+  border-bottom: 1px solid rgb(135 170 255 / 22%);
+  background: rgb(15 33 78 / 55%);
+}
+
+main .hub-value-strip > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  list-style: none;
+  margin: 0;
+  padding: 14px 18px;
+}
+
+main .hub-value-strip > ul > li {
+  color: #d5dcf4;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+main .hub-value-strip > ul > li:not(:last-child)::after {
+  content: "•";
+  margin-left: 18px;
+  color: #aebada;
+}
+
+@media (width >= 900px) {
+  main .hub-value-strip > ul {
+    justify-content: flex-start;
+    padding: 14px 42px;
+  }
+}

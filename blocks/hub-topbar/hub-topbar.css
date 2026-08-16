@@ -1,0 +1,109 @@
+main .hub-topbar-wrapper {
+  max-width: 1536px;
+  padding: 0;
+}
+
+main .hub-topbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid rgb(135 170 255 / 22%);
+  background: rgb(2 5 21 / 82%);
+  backdrop-filter: blur(18px);
+}
+
+main .hub-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  min-height: 72px;
+  padding: 14px 18px;
+  color: #fff;
+}
+
+main .hub-topbar .hub-topbar-brand strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+}
+
+main .hub-topbar .hub-topbar-brand strong::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: linear-gradient(145deg, #56d6ff, #114aa3 52%, #01174b);
+  transform: rotate(45deg);
+}
+
+main .hub-topbar .hub-topbar-brand strong::after {
+  content: "|";
+  margin: 0 18px;
+  color: rgb(174 186 218 / 60%);
+  font-size: 22px;
+}
+
+main .hub-topbar .hub-topbar-brand p {
+  margin: 0;
+  font-size: 12px;
+  color: #aebada;
+}
+
+main .hub-topbar .hub-topbar-links {
+  flex: 1;
+  min-width: 280px;
+}
+
+main .hub-topbar .hub-topbar-links nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+}
+
+main .hub-topbar .hub-topbar-cta a {
+  display: inline-block;
+  border: 1px solid rgb(93 136 255 / 70%);
+  border-radius: 12px;
+  padding: 10px 24px;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+main .hub-topbar .hub-topbar-links nav a {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 6px 2px;
+  color: #dfe6ff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+main .hub-topbar .hub-topbar-links nav a:hover {
+  background: rgb(255 255 255 / 8%);
+}
+
+@media (width >= 900px) {
+  main .hub-topbar {
+    padding: 14px 28px;
+    flex-wrap: nowrap;
+  }
+
+  main .hub-topbar .hub-topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  main .hub-topbar .hub-topbar-brand p {
+    margin-top: 4px;
+  }
+}
