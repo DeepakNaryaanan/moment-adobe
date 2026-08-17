@@ -142,6 +142,33 @@ function decorateButtons(main) {
   });
 }
 
+function isAdlcFrameworkPath(pathname) {
+  return pathname.endsWith('/adlc-framework') || pathname.endsWith('/adlc-framework.html');
+}
+
+function enhanceVideoPopupLinks(main) {
+  if (!isAdlcFrameworkPath(window.location.pathname)) return;
+
+  main.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+
+    const href = link.getAttribute('href') || '';
+    if (!href.includes('video-popup.html?video=')) return;
+
+    event.preventDefault();
+    const url = new URL(href, window.location.href).toString();
+
+    const width = 1100;
+    const height = 700;
+    const left = Math.max(0, Math.round((window.screen.width - width) / 2));
+    const top = Math.max(0, Math.round((window.screen.height - height) / 2));
+    const features = `popup=yes,width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    window.open(url, 'adlc-video-popup', features);
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -153,6 +180,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateButtons(main);
+  enhanceVideoPopupLinks(main);
 }
 
 /**
